@@ -1,0 +1,30 @@
+<h1>login</h1>
+
+<form action="/web/login" method="POST">
+  <h5>email</h5>
+  <input
+    type="email"
+    name="email" id="email" 
+    {{#if form.email}}value="{{form.email}}"{{/if}}/>
+    <br/>
+  {{#if data.email}}
+    <small>{{data.email}}</small>
+  {{/if}}
+  <h5>password </h5>
+  <input 
+    type="password" 
+    name="password" id="password" 
+    {{#if form.password}}value="{{form.password}}"{{/if}}/>
+  <br />
+  {{#if data.password}}
+    <small>{{data.password}}</small>
+  {{/if}}
+  <br />
+  <button onclick="submit" type="submit">login</button>
+  &nbsp;&nbsp;
+  <a href="/web/register">Sign up</a>
+  <br />
+  {{#if error}}
+    <small>{{error}}</small>
+  {{/if}}
+</form>

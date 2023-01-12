@@ -5,6 +5,7 @@ class Database {
         this._connect();
     }
 
+
     _connect() {
         // mongoose.connect('mongodb://localhost:27017/testing-db', {
         mongoose.connect(process.env.MONGO_URI, {

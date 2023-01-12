@@ -47,7 +47,7 @@ apiRouter.post('/update', upload.single('profile_url'), updateUser);
 apiRouter.post('/delete', deleteUser);
 
 // Jade 
-apiRouter.get('/', (re1, res) => {
+apiRouter.get('/', (req, res) => {
     res.render("index")
 });
 

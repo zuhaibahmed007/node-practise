@@ -1,0 +1,51 @@
+<h1>Register</h1>
+
+<form action="/web/register" method="POST">
+  <h5> first name </h5>
+  <input 
+      type="text" 
+      name="first_name" id="first_name"
+      {{#if form.first_name}}value="{{form.first_name}}"{{/if}} />
+  <br />
+  {{#if data.first_name}}
+    <small>{{data.first_name}}</small>
+  {{/if}}
+  <h5>last name </h5>
+  <input 
+  type="text"
+   name="last_name" id="last_name"
+   {{#if form.last_name}}value="{{form.last_name}}"{{/if}}  />
+  <br />
+  {{#if data.last_name}}
+    <small>{{data.last_name}}</small>
+  {{/if}}
+  <h5>email</h5>
+  <input 
+    type="email"
+    name="email" id="email"  
+    {{#if form.email}}value="{{form.email}}"{{/if}} />
+  <br />
+  {{#if data.email}}
+    <small>{{data.email}}</small>
+  {{/if}}
+  <h5>password </h5>
+  <input 
+    type="password"
+    name="password" id="password"
+    {{#if form.password}}value="{{form.password}}"{{/if}}  />
+  <br />
+  {{#if data.password}}
+    <small>{{data.password}}</small>
+  {{/if}}
+  <br />
+  <br />
+  <button onclick="submit" type="submit">Register</button>
+  &nbsp;&nbsp;
+  <a href="/web/login">Sign In</a>
+  <br />
+  {{#if error}}
+    <small>{{error}}</small>
+  {{/if}}
+</form>
+
+{{ log form }}
